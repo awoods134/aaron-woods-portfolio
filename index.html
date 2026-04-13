@@ -6,7 +6,7 @@
   <title>Aaron Woods — AWS DevOps Engineer & AI Automation Specialist</title>
   <meta name="description" content="Senior AWS DevOps Engineer with 5+ years building AI-powered automation, self-healing systems, and cost-optimized cloud infrastructure on AWS." />
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Fonts -->
@@ -30,8 +30,22 @@
             mono: ['JetBrains Mono', 'monospace'],
           },
           colors: {
-            accent: { DEFAULT: '#00d4ff', dark: '#0099bb', light: '#66e5ff' },
-            brand: { orange: '#ff6b2b', purple: '#7c3aed' }
+            accent: {
+              DEFAULT: '#00d4ff',
+              dark: '#0099bb',
+              light: '#66e5ff',
+            },
+            brand: {
+              orange: '#ff6b2b',
+              purple: '#7c3aed',
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite',
           },
         }
       }
@@ -41,7 +55,7 @@
 
 <body class="dark:bg-gray-950 bg-gray-50 dark:text-gray-100 text-gray-900 font-sans transition-colors duration-300 antialiased">
 
-  <!-- NAVBAR -->
+  <!-- ═══════════════════════════════════════════ NAVBAR ═══ -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
@@ -59,11 +73,13 @@
           <a href="#contact" class="nav-link dark:text-gray-400 text-gray-600 hover:text-accent transition-colors">Contact</a>
         </div>
 
+        <!-- Actions -->
         <div class="flex items-center gap-3">
-          <button id="theme-toggle" aria-label="Toggle dark mode" class="w-9 h-9 rounded-full flex items-center justify-center dark:bg-gray-800 bg-gray-200 hover:bg-accent/20 transition-all duration-200 text-sm">
+          <button id="theme-toggle" aria-label="Toggle dark mode"
+            class="w-9 h-9 rounded-full flex items-center justify-center dark:bg-gray-800 bg-gray-200 hover:bg-accent/20 transition-all duration-200 text-sm">
             <i id="theme-icon" class="fas fa-sun dark:text-yellow-400 text-gray-700"></i>
           </button>
-          <button id="mobile-menu-btn" class="md:hidden w-9 h-9 flex items-center justify-center dark:bg-gray-800 bg-gray-200 rounded-full">
+          <button id="mobile-menu-btn" class="md:hidden w-9 h-9 flex items-center justify-center dark:bg-gray-800 bg-gray-200 rounded-full" aria-label="Open menu">
             <i class="fas fa-bars text-sm dark:text-gray-300 text-gray-700"></i>
           </button>
         </div>
@@ -84,54 +100,68 @@
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- ═══════════════════════════════════════════ HERO ═══ -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       <div class="absolute inset-0 hero-grid opacity-30 dark:opacity-20"></div>
       <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full hero-glow opacity-20 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        <!-- Badge -->
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono font-medium mb-6
           dark:bg-gray-800/80 bg-white/80 backdrop-blur border dark:border-gray-700 border-gray-200
           dark:text-accent text-accent shadow-sm animate-badge">
           <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-          Built with Genspark.ai + AWS Kiro
+          Built with Genspark + AWS Kiro
         </div>
 
+        <!-- Name -->
         <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 hero-name">
           Aaron <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-brand-purple">Woods</span>
         </h1>
 
+        <!-- Title -->
         <p class="text-xl sm:text-2xl font-semibold dark:text-gray-300 text-gray-600 mb-3 hero-title">
           AWS DevOps Engineer &amp; AI Automation Specialist
         </p>
 
+        <!-- Location -->
         <p class="flex items-center justify-center gap-1.5 text-sm dark:text-gray-500 text-gray-500 mb-6 hero-location">
           <i class="fas fa-location-dot text-accent text-xs"></i>
           Alpharetta, GA
         </p>
 
+        <!-- Tagline -->
         <div class="max-w-2xl mx-auto mb-5 hero-tagline">
           <p class="text-base sm:text-lg font-mono dark:text-accent text-accent font-medium leading-relaxed">
             "Building autonomous AI agents on AWS | Kiro + Bedrock | Turning DevOps toil into self-healing systems"
           </p>
         </div>
 
+        <!-- Subtitle -->
         <p class="max-w-xl mx-auto text-sm sm:text-base dark:text-gray-400 text-gray-600 leading-relaxed mb-10 hero-subtitle">
           Senior AWS DevOps Engineer with 5+ years creating AI-powered automation that saves time, cuts costs, and boosts compliance.
         </p>
 
+        <!-- CTA Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-3 hero-cta">
-          <a href="#projects" class="px-6 py-3 rounded-lg bg-accent text-gray-900 font-semibold text-sm hover:bg-accent-light hover:scale-105 transition-all duration-200 shadow-lg shadow-accent/25">
+          <a href="#projects"
+            class="px-6 py-3 rounded-lg bg-accent text-gray-900 font-semibold text-sm hover:bg-accent-light hover:scale-105 transition-all duration-200 shadow-lg shadow-accent/25">
             <i class="fas fa-rocket mr-2"></i>View Projects
           </a>
-          <a href="aaron-woods-resume.pdf" download class="px-6 py-3 rounded-lg dark:bg-gray-800 bg-white font-semibold text-sm dark:text-gray-200 text-gray-700 border dark:border-gray-700 border-gray-200 hover:border-accent hover:text-accent hover:scale-105 transition-all duration-200 shadow-sm">
+          <a href="resume.pdf" download
+            class="px-6 py-3 rounded-lg dark:bg-gray-800 bg-white font-semibold text-sm dark:text-gray-200 text-gray-700
+              border dark:border-gray-700 border-gray-200 hover:border-accent hover:text-accent hover:scale-105 transition-all duration-200 shadow-sm">
             <i class="fas fa-download mr-2"></i>Download Resume
           </a>
-          <a href="#contact" class="px-6 py-3 rounded-lg border border-accent/50 text-accent font-semibold text-sm hover:bg-accent/10 hover:scale-105 transition-all duration-200">
+          <a href="#contact"
+            class="px-6 py-3 rounded-lg border border-accent/50 text-accent font-semibold text-sm
+              hover:bg-accent/10 hover:scale-105 transition-all duration-200">
             <i class="fas fa-envelope mr-2"></i>Contact Me
           </a>
         </div>
 
+        <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50">
           <span class="text-xs dark:text-gray-500 text-gray-400 font-mono">scroll</span>
           <i class="fas fa-chevron-down text-xs dark:text-gray-500 text-gray-400 animate-bounce"></i>
@@ -139,355 +169,686 @@
       </div>
     </section>
 
-    <!-- STATS BAR -->
-    <section class="dark:bg-gray-900/50 bg-white/50 border-y dark:border-gray-800 border-gray-200 py-8">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <div class="stat-card reveal">
-          <p class="text-3xl font-bold text-accent">74%</p>
-          <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">Cost Reduction</p>
-        </div>
-        <div class="stat-card reveal">
-          <p class="text-3xl font-bold text-accent">1,500+</p>
-          <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">Hours Automated</p>
-        </div>
-        <div class="stat-card reveal">
-          <p class="text-3xl font-bold text-accent">80%</p>
-          <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">Faster Deployments</p>
-        </div>
-        <div class="stat-card reveal">
-          <p class="text-3xl font-bold text-accent">5+</p>
-          <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">Years AWS Experience</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="section-label">About Me</span>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8 items-start">
-          <div class="md:col-span-2 reveal">
-            <p class="dark:text-gray-300 text-gray-700 leading-relaxed mb-4">
-              I'm a Senior AWS DevOps Engineer based in Alpharetta, GA, specializing in building AI-powered automation systems that transform how teams operate in the cloud. With 5+ years of hands-on AWS experience, I focus on creating self-healing infrastructure, intelligent CI/CD pipelines, and autonomous agents using AWS Bedrock and Kiro.
-            </p>
-            <p class="dark:text-gray-400 text-gray-600 leading-relaxed">
-              My approach combines deep cloud expertise with practical AI integration — turning repetitive DevOps toil into automated workflows that save time, reduce costs, and improve compliance across the board.
-            </p>
+    <!-- ═══════════════════════════════════════════ STATS BAR ═══ -->
+    <section class="dark:bg-gray-900/60 bg-white/80 backdrop-blur border-y dark:border-gray-800 border-gray-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="stat-card text-center reveal">
+            <p class="text-3xl font-extrabold text-accent mb-1">74%</p>
+            <p class="text-xs dark:text-gray-500 text-gray-500 font-medium uppercase tracking-wider">Remediation Time Saved</p>
           </div>
-          <div class="flex flex-wrap gap-2 justify-center md:justify-start reveal">
-            <span class="floating-badge tech-tag"><i class="fab fa-aws mr-1"></i>AWS</span>
-            <span class="floating-badge tech-tag"><i class="fas fa-robot mr-1"></i>AI/ML</span>
-            <span class="floating-badge tech-tag"><i class="fas fa-code-branch mr-1"></i>DevOps</span>
-            <span class="floating-badge tech-tag"><i class="fas fa-cloud mr-1"></i>Cloud</span>
-            <span class="floating-badge tech-tag"><i class="fas fa-terminal mr-1"></i>IaC</span>
+          <div class="stat-card text-center reveal">
+            <p class="text-3xl font-extrabold text-accent mb-1">1,500+</p>
+            <p class="text-xs dark:text-gray-500 text-gray-500 font-medium uppercase tracking-wider">Servers Automated</p>
+          </div>
+          <div class="stat-card text-center reveal">
+            <p class="text-3xl font-extrabold text-accent mb-1">80%</p>
+            <p class="text-xs dark:text-gray-500 text-gray-500 font-medium uppercase tracking-wider">Security Compliance Boost</p>
+          </div>
+          <div class="stat-card text-center reveal">
+            <p class="text-3xl font-extrabold text-accent mb-1">5+</p>
+            <p class="text-xs dark:text-gray-500 text-gray-500 font-medium uppercase tracking-wider">Years AWS Experience</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 dark:bg-gray-900/30 bg-gray-100/50">
+    <!-- ═══════════════════════════════════════════ ABOUT ═══ -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8">
       <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="section-label">Experience</span>
+        <div class="grid lg:grid-cols-5 gap-12 items-center">
+
+          <!-- Avatar / Graphic -->
+          <div class="lg:col-span-2 flex justify-center reveal">
+            <div class="relative">
+              <div class="w-52 h-52 rounded-2xl bg-gradient-to-br from-accent/20 to-brand-purple/30 flex items-center justify-center border dark:border-gray-700 border-gray-200 shadow-xl">
+                <div class="w-44 h-44 rounded-xl dark:bg-gray-800 bg-gray-100 flex flex-col items-center justify-center gap-2">
+                  <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-brand-purple flex items-center justify-center">
+                    <span class="text-white font-extrabold text-2xl">AW</span>
+                  </div>
+                  <span class="font-mono text-xs text-accent">@aaronwoods134</span>
+                  <div class="flex gap-1.5 mt-1">
+                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                    <span class="text-xs dark:text-gray-400 text-gray-500">Open to work</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Floating badges -->
+              <div class="floating-badge absolute -top-3 -right-3 dark:bg-gray-800 bg-white border dark:border-gray-700 border-gray-200 rounded-lg px-2 py-1 text-xs font-mono shadow">
+                <i class="fab fa-aws text-orange-400 mr-1"></i>AWS Expert
+              </div>
+              <div class="floating-badge absolute -bottom-3 -left-3 dark:bg-gray-800 bg-white border dark:border-gray-700 border-gray-200 rounded-lg px-2 py-1 text-xs font-mono shadow">
+                <i class="fas fa-robot text-accent mr-1"></i>AI Automation
+              </div>
+            </div>
+          </div>
+
+          <!-- About Text -->
+          <div class="lg:col-span-3 reveal">
+            <div class="section-label mb-3">About Me</div>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-5 dark:text-white text-gray-900">
+              Turning Toil into<br/>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-brand-purple">Autonomous Intelligence</span>
+            </h2>
+            <div class="space-y-4 dark:text-gray-400 text-gray-600 text-sm sm:text-base leading-relaxed">
+              <p>
+                I'm a Senior AWS DevOps Engineer passionate about turning repetitive infrastructure work into <strong class="dark:text-gray-200 text-gray-800">autonomous AI agents</strong>. At Infor, I engineered an autonomous AI agent skill in Kiro (Amazon Bedrock-powered) that audits <strong class="dark:text-gray-200 text-gray-800">1,500+ servers</strong> with Python-driven self-healing Qualys compliance — reducing remediation time and effort by <strong class="text-accent">74%</strong>.
+              </p>
+              <p>
+                My philosophy is simple: <span class="font-mono text-accent italic">if it repeats, automate it with AI.</span> I specialize in AWS, self-healing systems, cost optimization, and compliance automation.
+              </p>
+              <p>
+                I bridge the gap between traditional DevOps and modern AI-powered operations — building systems that don't just respond to incidents, but <strong class="dark:text-gray-200 text-gray-800">predict, prevent, and self-remediate</strong> them.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="tech-tag">AWS Bedrock</span>
+              <span class="tech-tag">Kiro AI Agent</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Self-Healing Systems</span>
+              <span class="tech-tag">Qualys</span>
+              <span class="tech-tag">Terraform</span>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ EXPERIENCE ═══ -->
+    <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 dark:bg-gray-900/40 bg-gray-100/50">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div class="section-label mb-3">Career Timeline</div>
+          <h2 class="text-3xl sm:text-4xl font-bold dark:text-white text-gray-900">Professional Experience</h2>
+        </div>
+
         <div class="timeline-container">
-          <div class="timeline-item reveal">
+
+          <!-- Job 1: Infor -->
+          <article class="timeline-item reveal">
             <div class="timeline-dot"></div>
-            <div class="timeline-content dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200">
-              <div class="flex flex-wrap items-center gap-2 mb-2">
-                <span class="date-badge">2022 — Present</span>
+            <div class="timeline-content dark:bg-gray-800/60 bg-white rounded-xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 class="text-lg font-bold dark:text-white text-gray-900">DevOps Engineer</h3>
+                  <p class="text-accent font-semibold text-sm flex items-center gap-1.5 mt-0.5">
+                    <i class="fas fa-building text-xs opacity-70"></i>Infor Inc — Atlanta, GA
+                  </p>
+                </div>
+                <span class="date-badge">Mar 2021 – Present</span>
               </div>
-              <h3 class="text-lg font-bold dark:text-white text-gray-900">Senior AWS DevOps Engineer</h3>
-              <p class="text-sm dark:text-gray-400 text-gray-600 mb-3">AI Automation & Cloud Infrastructure</p>
-              <ul class="text-sm dark:text-gray-300 text-gray-700 space-y-2">
-                <li class="flex gap-2"><span class="text-accent">▸</span>Built autonomous AI agents using AWS Bedrock + Kiro for self-healing infrastructure</li>
-                <li class="flex gap-2"><span class="text-accent">▸</span>Reduced cloud costs by 74% through intelligent resource optimization</li>
-                <li class="flex gap-2"><span class="text-accent">▸</span>Automated 1,500+ hours of manual DevOps tasks annually</li>
+              <ul class="space-y-2.5 dark:text-gray-400 text-gray-600 text-sm">
+                <li class="flex gap-2.5">
+                  <span class="text-accent mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Engineered <strong class="dark:text-gray-200 text-gray-800">autonomous AI agent skill in Kiro (Amazon Bedrock-powered)</strong> to audit 1,500+ servers; automated Qualys compliance checks with Python-driven self-healing — reduced remediation time/effort by <strong class="text-accent">74%</strong>.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-accent mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Improved environmental security compliance by <strong class="text-accent">80%</strong> through automated vulnerability identification and remediation using Qualys + new GitLab pipeline scripts.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-accent mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Directed Sumo Logic dashboards and alerts, contributing to a <strong class="text-accent">40% reduction</strong> in critical application incidents.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-accent mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Strengthened application uptime by <strong class="text-accent">90%</strong> by creating an automated service check to replace Nagios.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-accent mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Implemented scripts using Chef and Jenkins to automate Sumo Logic deployment to all <strong class="dark:text-gray-200 text-gray-800">19 environments</strong>.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-accent mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Developed <strong class="dark:text-gray-200 text-gray-800">9 automation tools</strong> in PowerShell and Bash that streamlined infrastructure provisioning, reducing manual effort by <strong class="text-accent">80%</strong>.</span>
+                </li>
               </ul>
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                <span class="mini-tag">AWS</span>
-                <span class="mini-tag">Bedrock</span>
-                <span class="mini-tag">Terraform</span>
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="mini-tag">AWS Bedrock</span>
+                <span class="mini-tag">Kiro</span>
                 <span class="mini-tag">Python</span>
-                <span class="mini-tag">CI/CD</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200">
-              <div class="flex flex-wrap items-center gap-2 mb-2">
-                <span class="date-badge">2020 — 2022</span>
-              </div>
-              <h3 class="text-lg font-bold dark:text-white text-gray-900">AWS DevOps Engineer</h3>
-              <p class="text-sm dark:text-gray-400 text-gray-600 mb-3">Cloud Migration & Automation</p>
-              <ul class="text-sm dark:text-gray-300 text-gray-700 space-y-2">
-                <li class="flex gap-2"><span class="text-accent">▸</span>Led cloud migration initiatives moving on-prem workloads to AWS</li>
-                <li class="flex gap-2"><span class="text-accent">▸</span>Implemented CI/CD pipelines reducing deployment time by 80%</li>
-                <li class="flex gap-2"><span class="text-accent">▸</span>Designed monitoring and alerting systems for production environments</li>
-              </ul>
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                <span class="mini-tag">CloudFormation</span>
-                <span class="mini-tag">Docker</span>
+                <span class="mini-tag">Qualys</span>
+                <span class="mini-tag">GitLab CI</span>
+                <span class="mini-tag">Sumo Logic</span>
+                <span class="mini-tag">Chef</span>
                 <span class="mini-tag">Jenkins</span>
-                <span class="mini-tag">Lambda</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Job 2: iVision -->
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content dark:bg-gray-800/60 bg-white rounded-xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 class="text-lg font-bold dark:text-white text-gray-900">Cloud Engineer</h3>
+                  <p class="text-brand-purple font-semibold text-sm flex items-center gap-1.5 mt-0.5">
+                    <i class="fas fa-building text-xs opacity-70"></i>iVision Inc — Atlanta, GA
+                  </p>
+                </div>
+                <span class="date-badge">Nov 2018 – Mar 2021</span>
+              </div>
+              <p class="text-xs font-mono dark:text-gray-500 text-gray-500 mb-3">
+                Associate Cloud Consultant (Nov 2018 – Aug 2019) → Cloud Engineer (Aug 2019 – Mar 2021)
+              </p>
+              <ul class="space-y-2.5 dark:text-gray-400 text-gray-600 text-sm">
+                <li class="flex gap-2.5">
+                  <span class="text-brand-purple mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Reduced EC2, ELB, EBS, S3, and Operations expenditures by <strong class="text-accent">40% on average</strong>.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-brand-purple mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Accelerated productivity by <strong class="text-accent">70%</strong> by integrating automation using AWS Systems Manager.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-brand-purple mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Strengthened security, network, data, and application solutions, increasing compliance by <strong class="text-accent">80%</strong>.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="text-brand-purple mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Produced Backup, Recovery, and Business Continuity processes, increasing savings by <strong class="text-accent">70%</strong>.</span>
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="mini-tag">AWS</span>
+                <span class="mini-tag">Systems Manager</span>
+                <span class="mini-tag">EC2</span>
+                <span class="mini-tag">S3</span>
+                <span class="mini-tag">Cost Optimization</span>
+                <span class="mini-tag">Security</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Job 3: EnPro -->
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content dark:bg-gray-800/60 bg-white rounded-xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 class="text-lg font-bold dark:text-white text-gray-900">System Administrator II</h3>
+                  <p class="text-gray-500 font-semibold text-sm flex items-center gap-1.5 mt-0.5">
+                    <i class="fas fa-building text-xs opacity-70"></i>EnPro Industries — Lawrenceville, GA
+                  </p>
+                </div>
+                <span class="date-badge">Jul 2015 – Mar 2016</span>
+              </div>
+              <ul class="space-y-2.5 dark:text-gray-400 text-gray-600 text-sm">
+                <li class="flex gap-2.5">
+                  <span class="dark:text-gray-500 text-gray-400 mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Resolved 1st and 2nd tier technical problems and created <strong class="dark:text-gray-200 text-gray-800">80% of support knowledge base</strong>.</span>
+                </li>
+                <li class="flex gap-2.5">
+                  <span class="dark:text-gray-500 text-gray-400 mt-1 flex-shrink-0"><i class="fas fa-chevron-right text-xs"></i></span>
+                  <span>Achieved resolution to long-term Java application issues, lowering tickets by <strong class="text-accent">70%</strong>.</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ PROJECTS ═══ -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div class="section-label mb-3">Featured Work</div>
+          <h2 class="text-3xl sm:text-4xl font-bold dark:text-white text-gray-900">Key Projects &amp; Automations</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+
+          <!-- Project 1: Featured / Kiro AI Agent -->
+          <article class="project-card featured-card sm:col-span-2 dark:bg-gray-800/60 bg-white rounded-2xl p-7 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group reveal">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-brand-purple/20 flex items-center justify-center border dark:border-gray-700 border-gray-200">
+                  <i class="fas fa-robot text-accent text-xl"></i>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="text-xl font-bold dark:text-white text-gray-900">Autonomous Kiro AI Agent</h3>
+                    <span class="text-xs font-mono px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">Featured</span>
+                  </div>
+                  <p class="text-xs dark:text-gray-500 text-gray-500 font-mono mt-0.5">2024 – 2025</p>
+                </div>
+              </div>
+              <div class="impact-badge">
+                <i class="fas fa-chart-line mr-1"></i>74% effort ↓
+              </div>
+            </div>
+            <p class="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-5">
+              Built on <strong class="dark:text-gray-200 text-gray-800">Amazon Bedrock-powered Kiro</strong>, this autonomous AI agent audits <strong class="dark:text-gray-200 text-gray-800">1,500+ servers</strong> end-to-end. It runs Qualys compliance checks, intelligently triages findings, and applies Python-driven self-healing remediations — all without human intervention. Resulted in a <strong class="text-accent">74% reduction</strong> in remediation effort and dramatically improved compliance posture.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag-sm">Amazon Bedrock</span>
+              <span class="tech-tag-sm">AWS Kiro</span>
+              <span class="tech-tag-sm">Python</span>
+              <span class="tech-tag-sm">Qualys</span>
+              <span class="tech-tag-sm">Self-Healing</span>
+              <span class="tech-tag-sm">1,500+ Servers</span>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card dark:bg-gray-800/60 bg-white rounded-2xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group reveal">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center">
+                <i class="fas fa-shield-halved text-orange-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-bold dark:text-white text-gray-900">GitLab Pipeline + Qualys Automation</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 font-mono">Security Compliance Pipeline</p>
+              </div>
+            </div>
+            <p class="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-4">
+              Designed end-to-end GitLab CI/CD pipelines that integrated directly with Qualys to automate vulnerability scanning, triage, and remediation — boosting security compliance by <strong class="text-accent">80%</strong>.
+            </p>
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tech-tag-sm">GitLab CI/CD</span>
+                <span class="tech-tag-sm">Qualys</span>
+                <span class="tech-tag-sm">Python</span>
+              </div>
+              <div class="impact-badge text-xs">80% compliance ↑</div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card dark:bg-gray-800/60 bg-white rounded-2xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group reveal">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
+                <i class="fas fa-chart-pie text-cyan-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-bold dark:text-white text-gray-900">Sumo Logic Cost &amp; Alert Optimization</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 font-mono">Monitoring &amp; Observability</p>
+              </div>
+            </div>
+            <p class="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-4">
+              Overhauled Sumo Logic dashboards and alerting architecture to deliver <strong class="text-accent">90% monthly cost savings</strong> while reducing critical application incidents by <strong class="text-accent">40%</strong>. Implemented automated alert deduplication and smart routing.
+            </p>
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tech-tag-sm">Sumo Logic</span>
+                <span class="tech-tag-sm">PagerDuty</span>
+                <span class="tech-tag-sm">Alerting</span>
+              </div>
+              <div class="impact-badge text-xs">90% cost ↓</div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card sm:col-span-2 dark:bg-gray-800/60 bg-white rounded-2xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group reveal">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+                <i class="fas fa-gears text-purple-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-bold dark:text-white text-gray-900">Chef + Jenkins Automation Suite</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 font-mono">Infrastructure Automation — 9 Tools</p>
+              </div>
+            </div>
+            <p class="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-4">
+              Developed a suite of <strong class="dark:text-gray-200 text-gray-800">9 automation tools</strong> in PowerShell and Bash orchestrated via Chef and Jenkins to fully automate Sumo Logic deployment across 19 environments — cutting manual deployment effort by <strong class="text-accent">80%</strong>.
+            </p>
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tech-tag-sm">Chef</span>
+                <span class="tech-tag-sm">Jenkins</span>
+                <span class="tech-tag-sm">PowerShell</span>
+                <span class="tech-tag-sm">Bash</span>
+                <span class="tech-tag-sm">19 Environments</span>
+              </div>
+              <div class="impact-badge text-xs">80% effort ↓</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ SKILLS ═══ -->
+    <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 dark:bg-gray-900/40 bg-gray-100/50">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div class="section-label mb-3">Technical Expertise</div>
+          <h2 class="text-3xl sm:text-4xl font-bold dark:text-white text-gray-900">Skills &amp; Tech Stack</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <!-- Languages -->
+          <div class="skill-group dark:bg-gray-800/60 bg-white rounded-2xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm reveal">
+            <div class="flex items-center gap-2.5 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-yellow-400/20 flex items-center justify-center">
+                <i class="fas fa-code text-yellow-400 text-sm"></i>
+              </div>
+              <h3 class="font-semibold dark:text-white text-gray-900 text-sm">Languages</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill"><i class="fab fa-python mr-1.5 text-blue-400"></i>Python</span>
+              <span class="skill-pill"><i class="fas fa-terminal mr-1.5 text-blue-300"></i>PowerShell</span>
+              <span class="skill-pill"><i class="fas fa-terminal mr-1.5 text-green-400"></i>Bash</span>
+            </div>
+          </div>
+
+          <!-- Repositories -->
+          <div class="skill-group dark:bg-gray-800/60 bg-white rounded-2xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm reveal">
+            <div class="flex items-center gap-2.5 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-orange-400/20 flex items-center justify-center">
+                <i class="fas fa-code-branch text-orange-400 text-sm"></i>
+              </div>
+              <h3 class="font-semibold dark:text-white text-gray-900 text-sm">Repositories</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill"><i class="fab fa-gitlab mr-1.5 text-orange-400"></i>GitLab</span>
+              <span class="skill-pill"><i class="fab fa-github mr-1.5 dark:text-gray-300 text-gray-600"></i>GitHub</span>
+            </div>
+          </div>
+
+          <!-- Containers -->
+          <div class="skill-group dark:bg-gray-800/60 bg-white rounded-2xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm reveal">
+            <div class="flex items-center gap-2.5 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-cyan-400/20 flex items-center justify-center">
+                <i class="fab fa-docker text-cyan-400 text-sm"></i>
+              </div>
+              <h3 class="font-semibold dark:text-white text-gray-900 text-sm">Containers &amp; Orchestration</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill"><i class="fab fa-docker mr-1.5 text-cyan-400"></i>Docker</span>
+              <span class="skill-pill"><i class="fas fa-ship mr-1.5 text-blue-400"></i>Kubernetes</span>
+            </div>
+          </div>
+
+          <!-- Monitoring -->
+          <div class="skill-group dark:bg-gray-800/60 bg-white rounded-2xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm reveal">
+            <div class="flex items-center gap-2.5 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-green-400/20 flex items-center justify-center">
+                <i class="fas fa-chart-line text-green-400 text-sm"></i>
+              </div>
+              <h3 class="font-semibold dark:text-white text-gray-900 text-sm">Monitoring &amp; Logging</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">Sumo Logic</span>
+              <span class="skill-pill">Grafana</span>
+              <span class="skill-pill">PagerDuty</span>
+              <span class="skill-pill">Splunk</span>
+              <span class="skill-pill">LogicMonitor</span>
+              <span class="skill-pill">Nagios</span>
+            </div>
+          </div>
+
+          <!-- 3rd Party Tools -->
+          <div class="skill-group dark:bg-gray-800/60 bg-white rounded-2xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm reveal">
+            <div class="flex items-center gap-2.5 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-purple-400/20 flex items-center justify-center">
+                <i class="fas fa-puzzle-piece text-purple-400 text-sm"></i>
+              </div>
+              <h3 class="font-semibold dark:text-white text-gray-900 text-sm">3rd Party Tools</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">GitLab Pipelines</span>
+              <span class="skill-pill">Qualys</span>
+              <span class="skill-pill">Terraform</span>
+              <span class="skill-pill">Chef</span>
+              <span class="skill-pill">Jenkins</span>
+              <span class="skill-pill">Jira</span>
+              <span class="skill-pill">Confluence</span>
+              <span class="skill-pill">ServiceNow</span>
+              <span class="skill-pill">CloudCheckr</span>
+            </div>
+          </div>
+
+          <!-- AWS Services -->
+          <div class="skill-group dark:bg-gray-800/60 bg-white rounded-2xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm reveal">
+            <div class="flex items-center gap-2.5 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-orange-400/20 flex items-center justify-center">
+                <i class="fab fa-aws text-orange-400 text-sm"></i>
+              </div>
+              <h3 class="font-semibold dark:text-white text-gray-900 text-sm">AWS / GovCloud Services</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill aws-pill">Bedrock</span>
+              <span class="skill-pill aws-pill">Amazon Q</span>
+              <span class="skill-pill aws-pill">EC2</span>
+              <span class="skill-pill aws-pill">EKS</span>
+              <span class="skill-pill aws-pill">ECS</span>
+              <span class="skill-pill aws-pill">ELB</span>
+              <span class="skill-pill aws-pill">EBS</span>
+              <span class="skill-pill aws-pill">VPC</span>
+              <span class="skill-pill aws-pill">IAM</span>
+              <span class="skill-pill aws-pill">RDS</span>
+              <span class="skill-pill aws-pill">S3</span>
+              <span class="skill-pill aws-pill">SQS</span>
+              <span class="skill-pill aws-pill">SNS</span>
+              <span class="skill-pill aws-pill">Systems Manager</span>
+              <span class="skill-pill aws-pill">Lambda</span>
+              <span class="skill-pill aws-pill">API Gateway</span>
+              <span class="skill-pill aws-pill">Config</span>
+              <span class="skill-pill aws-pill">CloudFormation</span>
+              <span class="skill-pill aws-pill">CloudWatch</span>
+              <span class="skill-pill aws-pill">CodeDeploy</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ CREDENTIALS ═══ -->
+    <section id="credentials" class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div class="section-label mb-3">Certifications</div>
+          <h2 class="text-3xl sm:text-4xl font-bold dark:text-white text-gray-900">Credentials &amp; Certifications</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <div class="cert-card reveal dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-orange-400/50 hover:shadow-md transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-orange-400/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-400/30 transition-colors">
+                <i class="fab fa-aws text-orange-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold dark:text-white text-gray-900 text-sm leading-tight">AWS Certified Solutions Architect</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 mt-0.5">Associate</p>
               </div>
             </div>
           </div>
+
+          <div class="cert-card reveal dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-orange-400/50 hover:shadow-md transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-orange-400/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-400/30 transition-colors">
+                <i class="fab fa-aws text-orange-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold dark:text-white text-gray-900 text-sm leading-tight">AWS Certified Developer</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 mt-0.5">Associate</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card reveal dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-orange-400/50 hover:shadow-md transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-orange-400/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-400/30 transition-colors">
+                <i class="fab fa-aws text-orange-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold dark:text-white text-gray-900 text-sm leading-tight">AWS Certified Cloud Practitioner</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 mt-0.5">Foundational</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card reveal dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-accent/50 hover:shadow-md transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/30 transition-colors">
+                <i class="fas fa-award text-accent text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold dark:text-white text-gray-900 text-sm leading-tight">Certified Six Sigma Black Belt</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 mt-0.5">CSSBB</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card reveal dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-purple-400/50 hover:shadow-md transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-purple-400/20 flex items-center justify-center flex-shrink-0 group-hover:bg-purple-400/30 transition-colors">
+                <i class="fas fa-certificate text-purple-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold dark:text-white text-gray-900 text-sm leading-tight">ITIL Foundation Certification</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 mt-0.5">IT Service Management</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card reveal dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-green-400/50 hover:shadow-md transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-green-400/20 flex items-center justify-center flex-shrink-0 group-hover:bg-green-400/30 transition-colors">
+                <i class="fas fa-chart-bar text-green-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold dark:text-white text-gray-900 text-sm leading-tight">LogicMonitor Certified Associate</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 mt-0.5">Infrastructure Monitoring</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card sm:col-span-2 lg:col-span-3 reveal dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-cyan-400/50 hover:shadow-md transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-cyan-400/20 flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-400/30 transition-colors">
+                <i class="fas fa-magnifying-glass-chart text-cyan-400 text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold dark:text-white text-gray-900 text-sm leading-tight">Sumo Logic Certified Fundamentals</h3>
+                <p class="text-xs dark:text-gray-500 text-gray-500 mt-0.5">Log Management &amp; Analytics</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="section-label">Projects</span>
-        </div>
-
-        <!-- Featured Project -->
-        <div class="featured-card project-card dark:bg-gray-800/50 bg-white rounded-2xl p-6 border dark:border-gray-700 border-gray-200 mb-6 reveal">
-          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-            <div>
-              <h3 class="text-xl font-bold dark:text-white text-gray-900">
-                <i class="fas fa-brain text-accent mr-2"></i>AI Self-Healing Infrastructure
-              </h3>
-              <p class="text-sm dark:text-gray-400 text-gray-600 mt-1">Autonomous agents that detect, diagnose, and remediate infrastructure issues in real-time</p>
-            </div>
-            <span class="impact-badge">74% Cost Reduction</span>
-          </div>
-          <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed mb-4">
-            Built an autonomous system using AWS Bedrock and Kiro that monitors infrastructure health, predicts failures, and automatically remediates issues before they impact users. Integrates with CloudWatch, EventBridge, and Lambda for end-to-end automation.
+    <!-- ═══════════════════════════════════════════ CONTACT ═══ -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 dark:bg-gray-900/40 bg-gray-100/50">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div class="section-label mb-3">Get In Touch</div>
+          <h2 class="text-3xl sm:text-4xl font-bold dark:text-white text-gray-900">Let's Work Together</h2>
+          <p class="mt-4 dark:text-gray-400 text-gray-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+            Open to new opportunities in <strong class="dark:text-gray-200 text-gray-800">AI-powered AWS DevOps / Platform Engineering</strong> roles in the Atlanta area.
           </p>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="tech-tag-sm">AWS Bedrock</span>
-            <span class="tech-tag-sm">Kiro</span>
-            <span class="tech-tag-sm">Lambda</span>
-            <span class="tech-tag-sm">EventBridge</span>
-            <span class="tech-tag-sm">CloudWatch</span>
-            <span class="tech-tag-sm">Python</span>
-          </div>
         </div>
 
-        <!-- Project Grid -->
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="project-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-base font-bold dark:text-white text-gray-900 mb-2">
-              <i class="fas fa-code-branch text-accent mr-2"></i>Intelligent CI/CD Pipeline
-            </h3>
-            <p class="text-sm dark:text-gray-400 text-gray-600 mb-3">AI-powered pipeline that auto-selects deployment strategies based on risk analysis and code changes.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="tech-tag-sm">CodePipeline</span>
-              <span class="tech-tag-sm">CodeBuild</span>
-              <span class="tech-tag-sm">Terraform</span>
-            </div>
-          </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
 
-          <div class="project-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-base font-bold dark:text-white text-gray-900 mb-2">
-              <i class="fas fa-shield-halved text-accent mr-2"></i>Compliance Automation Engine
-            </h3>
-            <p class="text-sm dark:text-gray-400 text-gray-600 mb-3">Automated compliance scanning and remediation across multi-account AWS environments.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="tech-tag-sm">Config</span>
-              <span class="tech-tag-sm">SecurityHub</span>
-              <span class="tech-tag-sm">SSM</span>
+          <a href="mailto:awoods134@gmail.com"
+            class="contact-card reveal flex flex-col items-center text-center gap-3 dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-accent/50 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
+              <i class="fas fa-envelope text-accent text-xl"></i>
             </div>
-          </div>
-
-          <div class="project-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-base font-bold dark:text-white text-gray-900 mb-2">
-              <i class="fas fa-chart-line text-accent mr-2"></i>Cost Optimization Dashboard
-            </h3>
-            <p class="text-sm dark:text-gray-400 text-gray-600 mb-3">Real-time cost monitoring with AI-driven recommendations for resource right-sizing.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="tech-tag-sm">Cost Explorer</span>
-              <span class="tech-tag-sm">QuickSight</span>
-              <span class="tech-tag-sm">Lambda</span>
+            <div>
+              <p class="text-xs dark:text-gray-500 text-gray-500 font-medium uppercase tracking-wider mb-1">Email</p>
+              <p class="text-sm dark:text-gray-300 text-gray-700 font-medium break-all">awoods134@gmail.com</p>
             </div>
-          </div>
-
-          <div class="project-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-base font-bold dark:text-white text-gray-900 mb-2">
-              <i class="fas fa-server text-accent mr-2"></i>Multi-Region DR Automation
-            </h3>
-            <p class="text-sm dark:text-gray-400 text-gray-600 mb-3">Automated disaster recovery with intelligent failover and data replication across regions.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="tech-tag-sm">Route 53</span>
-              <span class="tech-tag-sm">RDS</span>
-              <span class="tech-tag-sm">S3</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 dark:bg-gray-900/30 bg-gray-100/50">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="section-label">Skills & Tools</span>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="skill-group dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-sm font-bold dark:text-white text-gray-900 mb-3"><i class="fab fa-aws text-orange-400 mr-2"></i>AWS Services</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="skill-pill aws-pill">EC2</span>
-              <span class="skill-pill aws-pill">Lambda</span>
-              <span class="skill-pill aws-pill">ECS/EKS</span>
-              <span class="skill-pill aws-pill">Bedrock</span>
-              <span class="skill-pill aws-pill">CloudFormation</span>
-              <span class="skill-pill aws-pill">S3</span>
-              <span class="skill-pill aws-pill">RDS</span>
-              <span class="skill-pill aws-pill">EventBridge</span>
-            </div>
-          </div>
-          <div class="skill-group dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-sm font-bold dark:text-white text-gray-900 mb-3"><i class="fas fa-code text-accent mr-2"></i>Languages & IaC</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="skill-pill">Python</span>
-              <span class="skill-pill">Bash</span>
-              <span class="skill-pill">TypeScript</span>
-              <span class="skill-pill">Terraform</span>
-              <span class="skill-pill">CloudFormation</span>
-              <span class="skill-pill">CDK</span>
-            </div>
-          </div>
-          <div class="skill-group dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-sm font-bold dark:text-white text-gray-900 mb-3"><i class="fas fa-gears text-accent mr-2"></i>DevOps & CI/CD</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="skill-pill">Docker</span>
-              <span class="skill-pill">Kubernetes</span>
-              <span class="skill-pill">Jenkins</span>
-              <span class="skill-pill">GitHub Actions</span>
-              <span class="skill-pill">CodePipeline</span>
-              <span class="skill-pill">Ansible</span>
-            </div>
-          </div>
-          <div class="skill-group dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-sm font-bold dark:text-white text-gray-900 mb-3"><i class="fas fa-robot text-accent mr-2"></i>AI & Automation</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="skill-pill">AWS Bedrock</span>
-              <span class="skill-pill">Kiro</span>
-              <span class="skill-pill">LangChain</span>
-              <span class="skill-pill">Claude</span>
-              <span class="skill-pill">Prompt Engineering</span>
-            </div>
-          </div>
-          <div class="skill-group dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-sm font-bold dark:text-white text-gray-900 mb-3"><i class="fas fa-chart-bar text-accent mr-2"></i>Monitoring</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="skill-pill">CloudWatch</span>
-              <span class="skill-pill">Datadog</span>
-              <span class="skill-pill">Grafana</span>
-              <span class="skill-pill">Prometheus</span>
-              <span class="skill-pill">X-Ray</span>
-            </div>
-          </div>
-          <div class="skill-group dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 reveal">
-            <h3 class="text-sm font-bold dark:text-white text-gray-900 mb-3"><i class="fas fa-shield-halved text-accent mr-2"></i>Security</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="skill-pill">IAM</span>
-              <span class="skill-pill">SecurityHub</span>
-              <span class="skill-pill">GuardDuty</span>
-              <span class="skill-pill">KMS</span>
-              <span class="skill-pill">WAF</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CREDENTIALS -->
-    <section id="credentials" class="py-20 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="section-label">Credentials</span>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="cert-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 text-center reveal">
-            <i class="fab fa-aws text-3xl text-orange-400 mb-3"></i>
-            <h3 class="text-sm font-bold dark:text-white text-gray-900">AWS Solutions Architect</h3>
-            <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">Professional</p>
-          </div>
-          <div class="cert-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 text-center reveal">
-            <i class="fab fa-aws text-3xl text-orange-400 mb-3"></i>
-            <h3 class="text-sm font-bold dark:text-white text-gray-900">AWS DevOps Engineer</h3>
-            <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">Professional</p>
-          </div>
-          <div class="cert-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 text-center reveal">
-            <i class="fab fa-aws text-3xl text-orange-400 mb-3"></i>
-            <h3 class="text-sm font-bold dark:text-white text-gray-900">AWS Cloud Practitioner</h3>
-            <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">Foundational</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 dark:bg-gray-900/30 bg-gray-100/50">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="section-label">Contact</span>
-          <p class="dark:text-gray-400 text-gray-600 mt-4 text-sm">Let's connect — I'm always open to discussing new opportunities and ideas.</p>
-        </div>
-        <div class="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-          <a href="mailto:awoods134@gmail.com" class="contact-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 text-center reveal">
-            <i class="fas fa-envelope text-2xl text-accent mb-3"></i>
-            <h3 class="text-sm font-bold dark:text-white text-gray-900">Email</h3>
-            <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">awoods134@gmail.com</p>
           </a>
-          <a href="https://www.linkedin.com/in/aaronwoods134/" target="_blank" rel="noopener noreferrer" class="contact-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 text-center reveal">
-            <i class="fab fa-linkedin text-2xl text-blue-400 mb-3"></i>
-            <h3 class="text-sm font-bold dark:text-white text-gray-900">LinkedIn</h3>
-            <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">aaronwoods134</p>
+
+          <a href="tel:+18433567450"
+            class="contact-card reveal flex flex-col items-center text-center gap-3 dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-green-400/50 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-green-400/20 flex items-center justify-center group-hover:bg-green-400/30 transition-colors">
+              <i class="fas fa-phone text-green-400 text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs dark:text-gray-500 text-gray-500 font-medium uppercase tracking-wider mb-1">Phone</p>
+              <p class="text-sm dark:text-gray-300 text-gray-700 font-medium">(843) 356-7450</p>
+            </div>
           </a>
-          <a href="tel:+18433567450" class="contact-card dark:bg-gray-800/50 bg-white rounded-xl p-5 border dark:border-gray-700 border-gray-200 text-center reveal">
-            <i class="fas fa-phone text-2xl text-green-400 mb-3"></i>
-            <h3 class="text-sm font-bold dark:text-white text-gray-900">Phone</h3>
-            <p class="text-xs dark:text-gray-400 text-gray-600 mt-1">(843) 356-7450</p>
+
+          <a href="https://www.linkedin.com/in/aaronwoods134/" target="_blank" rel="noopener noreferrer"
+            class="contact-card reveal flex flex-col items-center text-center gap-3 dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-blue-400/50 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center group-hover:bg-blue-600/30 transition-colors">
+              <i class="fab fa-linkedin text-blue-400 text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs dark:text-gray-500 text-gray-500 font-medium uppercase tracking-wider mb-1">LinkedIn</p>
+              <p class="text-sm dark:text-gray-300 text-gray-700 font-medium">aaronwoods134</p>
+            </div>
           </a>
+
+          <a href="resume.pdf" download
+            class="contact-card reveal flex flex-col items-center text-center gap-3 dark:bg-gray-800/60 bg-white rounded-xl p-5 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:border-brand-purple/50 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-brand-purple/20 flex items-center justify-center group-hover:bg-brand-purple/30 transition-colors">
+              <i class="fas fa-file-arrow-down text-purple-400 text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs dark:text-gray-500 text-gray-500 font-medium uppercase tracking-wider mb-1">Resume</p>
+              <p class="text-sm dark:text-gray-300 text-gray-700 font-medium">Download PDF</p>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Status Banner -->
+        <div class="reveal flex items-center justify-center gap-3 px-5 py-4 rounded-xl dark:bg-green-900/20 bg-green-50 border dark:border-green-800/40 border-green-200 max-w-xl mx-auto">
+          <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse flex-shrink-0"></span>
+          <p class="text-sm dark:text-green-300 text-green-700 font-medium text-center">
+            Open to new opportunities in AI-powered AWS DevOps / Platform Engineering roles in the Atlanta area.
+          </p>
         </div>
       </div>
     </section>
-
-    <!-- FOOTER -->
-    <footer class="dark:bg-gray-950 bg-gray-900 text-gray-400 border-t dark:border-gray-800 border-gray-700 py-10 px-4 sm:px-6">
-      <div class="max-w-5xl mx-auto">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div class="flex flex-col items-center sm:items-start gap-1">
-            <span class="font-mono text-sm font-semibold text-accent">Aaron Woods</span>
-            <span class="text-xs text-gray-500">AWS DevOps Engineer &amp; AI Automation Specialist</span>
-            <span class="text-xs text-gray-600 flex items-center gap-1 mt-1">
-              <i class="fas fa-location-dot text-accent text-xs opacity-60"></i> Alpharetta, GA
-            </span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="flex items-center gap-4">
-              <a href="mailto:awoods134@gmail.com" class="text-gray-500 hover:text-accent transition-colors"><i class="fas fa-envelope text-lg"></i></a>
-              <a href="https://www.linkedin.com/in/aaronwoods134/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-400 transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
-              <a href="tel:+18433567450" class="text-gray-500 hover:text-green-400 transition-colors"><i class="fas fa-phone text-lg"></i></a>
-            </div>
-            <p class="text-xs text-gray-600 text-center">
-              This portfolio was built using Genspark.ai + AWS Kiro.
-            </p>
-          </div>
-
-          <div class="flex flex-col items-center sm:items-end gap-1">
-            <span class="text-xs text-gray-600">&copy; 2026 Aaron Woods</span>
-            <span class="text-xs text-gray-600">All rights reserved.</span>
-          </div>
-        </div>
-      </div>
-    </footer>
   </main>
 
-  <!-- JS -->
+  <!-- ═══════════════════════════════════════════ FOOTER ═══ -->
+  <footer class="dark:bg-gray-950 bg-gray-900 text-gray-400 border-t dark:border-gray-800 border-gray-700 py-10 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+
+        <div class="flex flex-col items-center sm:items-start gap-1">
+          <span class="font-mono text-sm font-semibold text-accent">Aaron Woods</span>
+          <span class="text-xs text-gray-500">AWS DevOps Engineer &amp; AI Automation Specialist</span>
+          <span class="text-xs text-gray-600 flex items-center gap-1 mt-1">
+            <i class="fas fa-location-dot text-accent text-xs opacity-60"></i>
+            Alpharetta, GA
+          </span>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="flex items-center gap-4">
+            <a href="mailto:awoods134@gmail.com" class="text-gray-500 hover:text-accent transition-colors" aria-label="Email">
+              <i class="fas fa-envelope text-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/aaronwoods134/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <a href="tel:+18433567450" class="text-gray-500 hover:text-green-400 transition-colors" aria-label="Phone">
+              <i class="fas fa-phone text-lg"></i>
+            </a>
+          </div>
+          <p class="text-xs text-gray-600 text-center">
+            This portfolio was built using <a href="https://genspark.ai" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Genspark.ai</a> + AWS Kiro.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center sm:items-end gap-1">
+          <span class="text-xs text-gray-600">© 2025 Aaron Woods</span>
+          <span class="text-xs text-gray-600">All rights reserved.</span>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
