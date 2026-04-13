@@ -49,7 +49,7 @@ css/
   style.css         Custom animations, dark/light mode, components
 js/
   main.js           All interactivity: theme, scroll, animations, cursor
-resume.pdf          (To be added — resume file for download)
+aaron-woods-resume-Cloud2026.pdf   Resume PDF for download
 README.md           This file
 ```
 
@@ -70,7 +70,7 @@ No database used — all content is hardcoded in HTML.
 
 ## ⚠️ To Do / Not Yet Implemented
 
-- [ ] **resume.pdf** — Add actual resume PDF file so the "Download Resume" button works
+- [x] **resume.pdf** — Resume PDF added (aaron-woods-resume-Cloud2026.pdf)
 - [ ] **Contact form** — Currently shows only contact info; could add a form via Formspree or similar
 - [ ] **Analytics** — Add Google Analytics or Plausible if desired
 - [ ] **OG / Social meta tags** — Twitter card, Open Graph for social sharing previews
@@ -78,7 +78,7 @@ No database used — all content is hardcoded in HTML.
 
 ## 💡 Next Steps
 
-1. Upload `resume.pdf` to the root directory so download links work
+1. ~~Upload resume PDF~~ ✅ Done
 2. Add a real headshot/photo to replace the initials avatar
 3. Optionally integrate Formspree for a working contact form
 4. Add `og:image` meta tag with a screenshot for social sharing
