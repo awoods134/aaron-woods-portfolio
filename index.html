@@ -391,116 +391,558 @@
     <!-- ═══════════════════════════════════════════ PROJECTS ═══ -->
     <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8">
       <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-14 reveal">
+
+        <div class="text-center mb-6 reveal">
           <div class="section-label mb-3">Featured Work</div>
-          <h2 class="text-3xl sm:text-4xl font-bold dark:text-white text-gray-900">Key Projects &amp; Automations</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold dark:text-white text-gray-900">Case Studies &amp; Automations</h2>
+          <p class="mt-3 text-sm dark:text-gray-500 text-gray-500 max-w-xl mx-auto">
+            Enterprise work is proprietary — these case studies tell the full story: the problem, the architecture, the decisions, and the results.
+          </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 gap-6">
+        <!-- No-GitHub Notice -->
+        <div class="reveal mb-10 flex items-start gap-3 px-4 py-3 rounded-xl dark:bg-gray-800/40 bg-gray-100 border dark:border-gray-700/50 border-gray-200 max-w-2xl mx-auto">
+          <i class="fas fa-lock text-accent mt-0.5 flex-shrink-0 text-sm"></i>
+          <p class="text-xs dark:text-gray-400 text-gray-600 leading-relaxed">
+            All projects were built inside <strong class="dark:text-gray-200 text-gray-800">Infor's enterprise AWS environment</strong>. Source code is proprietary. These case studies demonstrate engineering depth, architectural thinking, and measurable outcomes — no GitHub link required.
+          </p>
+        </div>
 
-          <!-- Project 1: Featured / Kiro AI Agent -->
-          <article class="project-card featured-card sm:col-span-2 dark:bg-gray-800/60 bg-white rounded-2xl p-7 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group reveal">
-            <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
-              <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-brand-purple/20 flex items-center justify-center border dark:border-gray-700 border-gray-200">
-                  <i class="fas fa-robot text-accent text-xl"></i>
-                </div>
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="text-xl font-bold dark:text-white text-gray-900">Autonomous Kiro AI Agent</h3>
-                    <span class="text-xs font-mono px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">Featured</span>
+        <div class="space-y-8">
+
+          <!-- ═══ CASE STUDY 1: Kiro AI Agent ═══ -->
+          <article class="case-study-card project-card featured-card dark:bg-gray-800/60 bg-white rounded-2xl border dark:border-gray-700/60 border-gray-200 shadow-sm overflow-hidden reveal">
+
+            <!-- Header -->
+            <div class="px-7 pt-7 pb-5 border-b dark:border-gray-700/50 border-gray-100">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-brand-purple/20 flex items-center justify-center border dark:border-gray-700 border-gray-200 flex-shrink-0">
+                    <i class="fas fa-robot text-accent text-xl"></i>
                   </div>
-                  <p class="text-xs dark:text-gray-500 text-gray-500 font-mono mt-0.5">2024 – 2025</p>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-xl font-bold dark:text-white text-gray-900">Autonomous Kiro AI Agent</h3>
+                      <span class="text-xs font-mono px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">Featured</span>
+                      <span class="text-xs font-mono px-2 py-0.5 rounded-full dark:bg-gray-700 bg-gray-100 dark:text-gray-400 text-gray-500">Infor Inc · 2024–2025</span>
+                    </div>
+                    <p class="text-sm dark:text-gray-400 text-gray-500 mt-1">Compliance Automation &amp; AI Self-Healing · AWS Bedrock + Kiro</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <div class="impact-badge"><i class="fas fa-arrow-trend-down mr-1"></i>74% remediation ↓</div>
+                  <div class="impact-badge"><i class="fas fa-server mr-1"></i>1,500+ servers</div>
                 </div>
               </div>
-              <div class="impact-badge">
-                <i class="fas fa-chart-line mr-1"></i>74% effort ↓
-              </div>
             </div>
-            <p class="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-5">
-              Built on <strong class="dark:text-gray-200 text-gray-800">Amazon Bedrock-powered Kiro</strong>, this autonomous AI agent audits <strong class="dark:text-gray-200 text-gray-800">1,500+ servers</strong> end-to-end. It runs Qualys compliance checks, intelligently triages findings, and applies Python-driven self-healing remediations — all without human intervention. Resulted in a <strong class="text-accent">74% reduction</strong> in remediation effort and dramatically improved compliance posture.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="tech-tag-sm">Amazon Bedrock</span>
-              <span class="tech-tag-sm">AWS Kiro</span>
-              <span class="tech-tag-sm">Python</span>
-              <span class="tech-tag-sm">Qualys</span>
-              <span class="tech-tag-sm">Self-Healing</span>
-              <span class="tech-tag-sm">1,500+ Servers</span>
-            </div>
-          </article>
 
-          <!-- Project 2 -->
-          <article class="project-card dark:bg-gray-800/60 bg-white rounded-2xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group reveal">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center">
-                <i class="fas fa-shield-halved text-orange-400 text-lg"></i>
+            <!-- Body -->
+            <div class="px-7 py-6 space-y-7">
+
+              <!-- Problem / Solution / Result row -->
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div class="cs-psr-card cs-problem">
+                  <div class="cs-psr-label"><i class="fas fa-triangle-exclamation mr-1.5"></i>Problem</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">
+                    1,500+ servers required manual Qualys compliance audits every cycle — a weeks-long, error-prone process consuming significant engineer time with no scalability.
+                  </p>
+                </div>
+                <div class="cs-psr-card cs-solution">
+                  <div class="cs-psr-label"><i class="fas fa-lightbulb mr-1.5"></i>Approach</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">
+                    Engineered an autonomous AI agent skill in AWS Kiro, backed by Amazon Bedrock's LLM reasoning, to audit servers, interpret Qualys findings, and execute Python self-healing remediations end-to-end.
+                  </p>
+                </div>
+                <div class="cs-psr-card cs-result">
+                  <div class="cs-psr-label"><i class="fas fa-chart-line mr-1.5"></i>Result</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">
+                    Fully autonomous compliance loop across all servers. Remediation effort dropped <strong class="text-accent">74%</strong>. Compliance posture improved from reactive to continuous. Zero manual intervention required.
+                  </p>
+                </div>
               </div>
+
+              <!-- Architecture Diagram -->
               <div>
-                <h3 class="text-base font-bold dark:text-white text-gray-900">GitLab Pipeline + Qualys Automation</h3>
-                <p class="text-xs dark:text-gray-500 text-gray-500 font-mono">Security Compliance Pipeline</p>
+                <h4 class="cs-section-title"><i class="fas fa-diagram-project mr-2 text-accent"></i>System Architecture</h4>
+                <div class="arch-diagram rounded-xl dark:bg-gray-900/60 bg-gray-50 border dark:border-gray-700/50 border-gray-200 p-5 overflow-x-auto">
+                  <div class="arch-flow">
+                    <div class="arch-node arch-trigger">
+                      <i class="fas fa-clock arch-node-icon"></i>
+                      <span>Scheduled<br/>Trigger</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-ai">
+                      <i class="fas fa-robot arch-node-icon"></i>
+                      <span>Kiro AI<br/>Agent</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-bedrock">
+                      <i class="fas fa-brain arch-node-icon"></i>
+                      <span>Amazon<br/>Bedrock LLM</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-scan">
+                      <i class="fas fa-magnifying-glass arch-node-icon"></i>
+                      <span>Qualys<br/>API Scan</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-servers">
+                      <i class="fas fa-server arch-node-icon"></i>
+                      <span>1,500+<br/>Servers</span>
+                    </div>
+                  </div>
+                  <div class="arch-flow mt-3 justify-center">
+                    <div class="arch-arrow rotate-90 opacity-40"><i class="fas fa-chevron-right"></i></div>
+                  </div>
+                  <div class="arch-flow mt-1 justify-center gap-4">
+                    <div class="arch-node arch-findings w-36">
+                      <i class="fas fa-list-check arch-node-icon"></i>
+                      <span>Triage<br/>Findings</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-heal w-36">
+                      <i class="fas fa-heart-pulse arch-node-icon text-green-400"></i>
+                      <span>Python<br/>Self-Healing</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-report w-36">
+                      <i class="fas fa-file-shield arch-node-icon text-blue-400"></i>
+                      <span>Compliance<br/>Report</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <p class="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-4">
-              Designed end-to-end GitLab CI/CD pipelines that integrated directly with Qualys to automate vulnerability scanning, triage, and remediation — boosting security compliance by <strong class="text-accent">80%</strong>.
-            </p>
-            <div class="flex items-center justify-between flex-wrap gap-2">
-              <div class="flex flex-wrap gap-1.5">
-                <span class="tech-tag-sm">GitLab CI/CD</span>
-                <span class="tech-tag-sm">Qualys</span>
+
+              <!-- Before / After Table -->
+              <div>
+                <h4 class="cs-section-title"><i class="fas fa-arrows-left-right mr-2 text-accent"></i>Before vs. After</h4>
+                <div class="overflow-x-auto rounded-xl border dark:border-gray-700/50 border-gray-200">
+                  <table class="w-full text-sm">
+                    <thead>
+                      <tr class="dark:bg-gray-900/60 bg-gray-50 border-b dark:border-gray-700/50 border-gray-200">
+                        <th class="text-left px-4 py-3 font-semibold dark:text-gray-300 text-gray-700 w-1/3">Dimension</th>
+                        <th class="text-left px-4 py-3 font-semibold text-red-400 w-1/3"><i class="fas fa-xmark mr-1.5"></i>Before</th>
+                        <th class="text-left px-4 py-3 font-semibold text-green-400 w-1/3"><i class="fas fa-check mr-1.5"></i>After</th>
+                      </tr>
+                    </thead>
+                    <tbody class="dark:text-gray-400 text-gray-600 divide-y dark:divide-gray-700/50 divide-gray-100">
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Audit cycle</td>
+                        <td class="px-4 py-3">Manual, weeks per cycle</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Continuous, automated</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Remediation</td>
+                        <td class="px-4 py-3">Engineer-driven, ticket-based</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Self-healing, zero human intervention</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Servers covered</td>
+                        <td class="px-4 py-3">Partial, sample-based</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">All 1,500+ servers, every cycle</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Effort per cycle</td>
+                        <td class="px-4 py-3">~100% engineer time</td>
+                        <td class="px-4 py-3 text-green-400 font-medium"><strong class="text-accent">74% reduction</strong></td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Compliance posture</td>
+                        <td class="px-4 py-3">Reactive, periodic</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Proactive, continuous</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Tech Decisions -->
+              <div>
+                <h4 class="cs-section-title"><i class="fas fa-code-branch mr-2 text-accent"></i>Key Technical Decisions</h4>
+                <div class="grid sm:grid-cols-3 gap-3">
+                  <div class="cs-decision-card">
+                    <p class="cs-decision-tool">Why AWS Kiro?</p>
+                    <p class="cs-decision-reason">Native AWS agent framework with built-in Bedrock integration, IAM controls, and audit trails — no third-party LLM orchestration risk.</p>
+                  </div>
+                  <div class="cs-decision-card">
+                    <p class="cs-decision-tool">Why Amazon Bedrock?</p>
+                    <p class="cs-decision-reason">Keeps all LLM inference inside the AWS security boundary. No data leaves the VPC. Meets enterprise compliance requirements.</p>
+                  </div>
+                  <div class="cs-decision-card">
+                    <p class="cs-decision-tool">Why Python self-healing?</p>
+                    <p class="cs-decision-reason">Bedrock reasons about findings; Python executes deterministic remediations via SSM Run Command — separating AI judgement from action execution.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack -->
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-tag-sm">Amazon Bedrock</span>
+                <span class="tech-tag-sm">AWS Kiro</span>
                 <span class="tech-tag-sm">Python</span>
+                <span class="tech-tag-sm">Qualys API</span>
+                <span class="tech-tag-sm">SSM Run Command</span>
+                <span class="tech-tag-sm">IAM</span>
+                <span class="tech-tag-sm">CloudWatch</span>
+                <span class="tech-tag-sm">Self-Healing</span>
               </div>
-              <div class="impact-badge text-xs">80% compliance ↑</div>
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="project-card dark:bg-gray-800/60 bg-white rounded-2xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group reveal">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
-                <i class="fas fa-chart-pie text-cyan-400 text-lg"></i>
-              </div>
-              <div>
-                <h3 class="text-base font-bold dark:text-white text-gray-900">Sumo Logic Cost &amp; Alert Optimization</h3>
-                <p class="text-xs dark:text-gray-500 text-gray-500 font-mono">Monitoring &amp; Observability</p>
+          <!-- ═══ CASE STUDY 2: GitLab + Qualys ═══ -->
+          <article class="case-study-card project-card dark:bg-gray-800/60 bg-white rounded-2xl border dark:border-gray-700/60 border-gray-200 shadow-sm overflow-hidden reveal">
+
+            <!-- Header -->
+            <div class="px-7 pt-7 pb-5 border-b dark:border-gray-700/50 border-gray-100">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-shield-halved text-orange-400 text-xl"></i>
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-xl font-bold dark:text-white text-gray-900">GitLab Pipeline + Qualys Automation</h3>
+                      <span class="text-xs font-mono px-2 py-0.5 rounded-full dark:bg-gray-700 bg-gray-100 dark:text-gray-400 text-gray-500">Infor Inc · 2022–2023</span>
+                    </div>
+                    <p class="text-sm dark:text-gray-400 text-gray-500 mt-1">Security Compliance Pipeline · GitLab CI/CD + Qualys</p>
+                  </div>
+                </div>
+                <div class="impact-badge"><i class="fas fa-shield mr-1"></i>80% compliance ↑</div>
               </div>
             </div>
-            <p class="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-4">
-              Overhauled Sumo Logic dashboards and alerting architecture to deliver <strong class="text-accent">90% monthly cost savings</strong> while reducing critical application incidents by <strong class="text-accent">40%</strong>. Implemented automated alert deduplication and smart routing.
-            </p>
-            <div class="flex items-center justify-between flex-wrap gap-2">
-              <div class="flex flex-wrap gap-1.5">
+
+            <!-- Body -->
+            <div class="px-7 py-6 space-y-6">
+
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div class="cs-psr-card cs-problem">
+                  <div class="cs-psr-label"><i class="fas fa-triangle-exclamation mr-1.5"></i>Problem</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">Vulnerability scanning was disconnected from the deployment pipeline — security findings sat in Qualys dashboards but had no automated path to remediation, leaving environments exposed for weeks.</p>
+                </div>
+                <div class="cs-psr-card cs-solution">
+                  <div class="cs-psr-label"><i class="fas fa-lightbulb mr-1.5"></i>Approach</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">Built GitLab CI/CD pipeline stages that called the Qualys API at deploy time, parsed severity findings with Python, auto-remediated known CVEs, and blocked deployments on critical unresolved issues.</p>
+                </div>
+                <div class="cs-psr-card cs-result">
+                  <div class="cs-psr-label"><i class="fas fa-chart-line mr-1.5"></i>Result</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">Environmental security compliance improved by <strong class="text-accent">80%</strong>. Vulnerability dwell time dropped from weeks to hours. Security became a first-class step in every deployment.</p>
+                </div>
+              </div>
+
+              <!-- Architecture -->
+              <div>
+                <h4 class="cs-section-title"><i class="fas fa-diagram-project mr-2 text-accent"></i>Pipeline Architecture</h4>
+                <div class="arch-diagram rounded-xl dark:bg-gray-900/60 bg-gray-50 border dark:border-gray-700/50 border-gray-200 p-5 overflow-x-auto">
+                  <div class="arch-flow">
+                    <div class="arch-node arch-trigger">
+                      <i class="fab fa-gitlab arch-node-icon text-orange-400"></i>
+                      <span>Git<br/>Push</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-ai">
+                      <i class="fas fa-vials arch-node-icon"></i>
+                      <span>Build &amp;<br/>Test Stage</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-scan">
+                      <i class="fas fa-magnifying-glass arch-node-icon"></i>
+                      <span>Qualys<br/>API Scan</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-findings">
+                      <i class="fas fa-code arch-node-icon"></i>
+                      <span>Python<br/>Triage</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-heal">
+                      <i class="fas fa-heart-pulse arch-node-icon text-green-400"></i>
+                      <span>Auto<br/>Remediate</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-report">
+                      <i class="fas fa-rocket arch-node-icon text-blue-400"></i>
+                      <span>Deploy<br/>or Block</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Before / After -->
+              <div>
+                <h4 class="cs-section-title"><i class="fas fa-arrows-left-right mr-2 text-accent"></i>Before vs. After</h4>
+                <div class="overflow-x-auto rounded-xl border dark:border-gray-700/50 border-gray-200">
+                  <table class="w-full text-sm">
+                    <thead>
+                      <tr class="dark:bg-gray-900/60 bg-gray-50 border-b dark:border-gray-700/50 border-gray-200">
+                        <th class="text-left px-4 py-3 font-semibold dark:text-gray-300 text-gray-700 w-1/3">Dimension</th>
+                        <th class="text-left px-4 py-3 font-semibold text-red-400 w-1/3"><i class="fas fa-xmark mr-1.5"></i>Before</th>
+                        <th class="text-left px-4 py-3 font-semibold text-green-400 w-1/3"><i class="fas fa-check mr-1.5"></i>After</th>
+                      </tr>
+                    </thead>
+                    <tbody class="dark:text-gray-400 text-gray-600 divide-y dark:divide-gray-700/50 divide-gray-100">
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Vulnerability detection</td>
+                        <td class="px-4 py-3">Manual Qualys dashboard reviews</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Automatic at every deploy</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Dwell time (CVEs)</td>
+                        <td class="px-4 py-3">Days to weeks</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Hours, often minutes</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Compliance rate</td>
+                        <td class="px-4 py-3">Inconsistent across envs</td>
+                        <td class="px-4 py-3 text-green-400 font-medium"><strong class="text-accent">80% improvement</strong></td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Critical deploy risk</td>
+                        <td class="px-4 py-3">No gate — anything could deploy</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Critical CVEs block pipeline</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Tech Decisions -->
+              <div>
+                <h4 class="cs-section-title"><i class="fas fa-code-branch mr-2 text-accent"></i>Key Technical Decisions</h4>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <div class="cs-decision-card">
+                    <p class="cs-decision-tool">Pipeline-native scanning</p>
+                    <p class="cs-decision-reason">Integrating Qualys directly into GitLab stages (not as a separate process) ensured every deploy was scanned — no exceptions, no manual triggers.</p>
+                  </div>
+                  <div class="cs-decision-card">
+                    <p class="cs-decision-tool">Severity-tiered response</p>
+                    <p class="cs-decision-reason">Python triage logic separated Critical/High (block + alert) from Medium/Low (auto-remediate + log), preventing alert fatigue while ensuring zero critical bypass.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-tag-sm">GitLab CI/CD</span>
+                <span class="tech-tag-sm">Qualys API</span>
+                <span class="tech-tag-sm">Python</span>
+                <span class="tech-tag-sm">Bash</span>
+                <span class="tech-tag-sm">Pipeline Gates</span>
+                <span class="tech-tag-sm">CVE Triage</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ═══ CASE STUDY 3: Sumo Logic ═══ -->
+          <article class="case-study-card project-card dark:bg-gray-800/60 bg-white rounded-2xl border dark:border-gray-700/60 border-gray-200 shadow-sm overflow-hidden reveal">
+
+            <!-- Header -->
+            <div class="px-7 pt-7 pb-5 border-b dark:border-gray-700/50 border-gray-100">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-chart-pie text-cyan-400 text-xl"></i>
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-xl font-bold dark:text-white text-gray-900">Sumo Logic Cost &amp; Alert Optimization</h3>
+                      <span class="text-xs font-mono px-2 py-0.5 rounded-full dark:bg-gray-700 bg-gray-100 dark:text-gray-400 text-gray-500">Infor Inc · 2021–2022</span>
+                    </div>
+                    <p class="text-sm dark:text-gray-400 text-gray-500 mt-1">Observability Platform Engineering · Cost Reduction + Incident Reduction</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <div class="impact-badge"><i class="fas fa-dollar-sign mr-1"></i>90% cost ↓</div>
+                  <div class="impact-badge"><i class="fas fa-bell-slash mr-1"></i>40% incidents ↓</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <div class="px-7 py-6 space-y-6">
+
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div class="cs-psr-card cs-problem">
+                  <div class="cs-psr-label"><i class="fas fa-triangle-exclamation mr-1.5"></i>Problem</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">Sumo Logic costs were ballooning due to unoptimized log ingestion, redundant dashboards, and noisy alerting that caused alert fatigue and missed real incidents.</p>
+                </div>
+                <div class="cs-psr-card cs-solution">
+                  <div class="cs-psr-label"><i class="fas fa-lightbulb mr-1.5"></i>Approach</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">Audited all log sources and dashboards, implemented log filtering and field extraction rules to reduce ingest volume, rebuilt alerting with deduplication logic and intelligent routing to reduce noise.</p>
+                </div>
+                <div class="cs-psr-card cs-result">
+                  <div class="cs-psr-label"><i class="fas fa-chart-line mr-1.5"></i>Result</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed"><strong class="text-accent">90% monthly cost savings</strong> on Sumo Logic spend. Critical incident alerts dropped <strong class="text-accent">40%</strong> due to deduplication — while actual incident detection rate improved.</p>
+                </div>
+              </div>
+
+              <!-- Before / After -->
+              <div>
+                <h4 class="cs-section-title"><i class="fas fa-arrows-left-right mr-2 text-accent"></i>Before vs. After</h4>
+                <div class="overflow-x-auto rounded-xl border dark:border-gray-700/50 border-gray-200">
+                  <table class="w-full text-sm">
+                    <thead>
+                      <tr class="dark:bg-gray-900/60 bg-gray-50 border-b dark:border-gray-700/50 border-gray-200">
+                        <th class="text-left px-4 py-3 font-semibold dark:text-gray-300 text-gray-700 w-1/3">Dimension</th>
+                        <th class="text-left px-4 py-3 font-semibold text-red-400 w-1/3"><i class="fas fa-xmark mr-1.5"></i>Before</th>
+                        <th class="text-left px-4 py-3 font-semibold text-green-400 w-1/3"><i class="fas fa-check mr-1.5"></i>After</th>
+                      </tr>
+                    </thead>
+                    <tbody class="dark:text-gray-400 text-gray-600 divide-y dark:divide-gray-700/50 divide-gray-100">
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Monthly Sumo Logic cost</td>
+                        <td class="px-4 py-3">Unoptimized, high ingest</td>
+                        <td class="px-4 py-3 text-green-400 font-medium"><strong class="text-accent">90% reduction</strong></td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Alert volume</td>
+                        <td class="px-4 py-3">High noise, alert fatigue</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">40% fewer critical alerts, higher signal quality</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Dashboard quality</td>
+                        <td class="px-4 py-3">Redundant, unowned</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Consolidated, actionable, team-owned</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">MTTR</td>
+                        <td class="px-4 py-3">Slow — alerts buried in noise</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Faster response with clear signal routing</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
                 <span class="tech-tag-sm">Sumo Logic</span>
                 <span class="tech-tag-sm">PagerDuty</span>
-                <span class="tech-tag-sm">Alerting</span>
+                <span class="tech-tag-sm">Log Filtering</span>
+                <span class="tech-tag-sm">Alert Deduplication</span>
+                <span class="tech-tag-sm">Field Extraction</span>
+                <span class="tech-tag-sm">Cost Optimization</span>
               </div>
-              <div class="impact-badge text-xs">90% cost ↓</div>
             </div>
           </article>
 
-          <!-- Project 4 -->
-          <article class="project-card sm:col-span-2 dark:bg-gray-800/60 bg-white rounded-2xl p-6 border dark:border-gray-700/60 border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group reveal">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                <i class="fas fa-gears text-purple-400 text-lg"></i>
-              </div>
-              <div>
-                <h3 class="text-base font-bold dark:text-white text-gray-900">Chef + Jenkins Automation Suite</h3>
-                <p class="text-xs dark:text-gray-500 text-gray-500 font-mono">Infrastructure Automation — 9 Tools</p>
+          <!-- ═══ CASE STUDY 4: Chef + Jenkins ═══ -->
+          <article class="case-study-card project-card dark:bg-gray-800/60 bg-white rounded-2xl border dark:border-gray-700/60 border-gray-200 shadow-sm overflow-hidden reveal">
+
+            <!-- Header -->
+            <div class="px-7 pt-7 pb-5 border-b dark:border-gray-700/50 border-gray-100">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-gears text-purple-400 text-xl"></i>
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-xl font-bold dark:text-white text-gray-900">Chef + Jenkins Automation Suite</h3>
+                      <span class="text-xs font-mono px-2 py-0.5 rounded-full dark:bg-gray-700 bg-gray-100 dark:text-gray-400 text-gray-500">Infor Inc · 2021</span>
+                    </div>
+                    <p class="text-sm dark:text-gray-400 text-gray-500 mt-1">Infrastructure Automation · 9 Tools across 19 Environments</p>
+                  </div>
+                </div>
+                <div class="impact-badge"><i class="fas fa-gears mr-1"></i>80% manual effort ↓</div>
               </div>
             </div>
-            <p class="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-4">
-              Developed a suite of <strong class="dark:text-gray-200 text-gray-800">9 automation tools</strong> in PowerShell and Bash orchestrated via Chef and Jenkins to fully automate Sumo Logic deployment across 19 environments — cutting manual deployment effort by <strong class="text-accent">80%</strong>.
-            </p>
-            <div class="flex flex-wrap items-center justify-between gap-3">
-              <div class="flex flex-wrap gap-1.5">
+
+            <!-- Body -->
+            <div class="px-7 py-6 space-y-6">
+
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div class="cs-psr-card cs-problem">
+                  <div class="cs-psr-label"><i class="fas fa-triangle-exclamation mr-1.5"></i>Problem</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">Sumo Logic agent deployment across 19 environments was entirely manual — each deployment requiring repetitive, error-prone steps across hundreds of servers with no consistency guarantees.</p>
+                </div>
+                <div class="cs-psr-card cs-solution">
+                  <div class="cs-psr-label"><i class="fas fa-lightbulb mr-1.5"></i>Approach</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">Developed 9 automation tools in PowerShell and Bash, wrapped in Chef cookbooks and orchestrated through Jenkins pipelines to standardize and fully automate the Sumo Logic deployment lifecycle.</p>
+                </div>
+                <div class="cs-psr-card cs-result">
+                  <div class="cs-psr-label"><i class="fas fa-chart-line mr-1.5"></i>Result</div>
+                  <p class="text-sm dark:text-gray-300 text-gray-700 leading-relaxed">Manual deployment effort cut by <strong class="text-accent">80%</strong>. All 19 environments now deploy identically from a single pipeline trigger. Drift eliminated. Onboarding new environments reduced from days to hours.</p>
+                </div>
+              </div>
+
+              <!-- Architecture -->
+              <div>
+                <h4 class="cs-section-title"><i class="fas fa-diagram-project mr-2 text-accent"></i>Automation Architecture</h4>
+                <div class="arch-diagram rounded-xl dark:bg-gray-900/60 bg-gray-50 border dark:border-gray-700/50 border-gray-200 p-5 overflow-x-auto">
+                  <div class="arch-flow">
+                    <div class="arch-node arch-trigger">
+                      <i class="fas fa-play arch-node-icon"></i>
+                      <span>Jenkins<br/>Trigger</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-ai">
+                      <i class="fas fa-book arch-node-icon text-purple-400"></i>
+                      <span>Chef<br/>Cookbook</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-bedrock">
+                      <i class="fas fa-terminal arch-node-icon text-green-400"></i>
+                      <span>PowerShell<br/>/ Bash (×9)</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-scan">
+                      <i class="fas fa-layer-group arch-node-icon"></i>
+                      <span>19<br/>Environments</span>
+                    </div>
+                    <div class="arch-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="arch-node arch-report">
+                      <i class="fas fa-circle-check arch-node-icon text-green-400"></i>
+                      <span>Sumo Logic<br/>Deployed</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Before / After -->
+              <div>
+                <h4 class="cs-section-title"><i class="fas fa-arrows-left-right mr-2 text-accent"></i>Before vs. After</h4>
+                <div class="overflow-x-auto rounded-xl border dark:border-gray-700/50 border-gray-200">
+                  <table class="w-full text-sm">
+                    <thead>
+                      <tr class="dark:bg-gray-900/60 bg-gray-50 border-b dark:border-gray-700/50 border-gray-200">
+                        <th class="text-left px-4 py-3 font-semibold dark:text-gray-300 text-gray-700 w-1/3">Dimension</th>
+                        <th class="text-left px-4 py-3 font-semibold text-red-400 w-1/3"><i class="fas fa-xmark mr-1.5"></i>Before</th>
+                        <th class="text-left px-4 py-3 font-semibold text-green-400 w-1/3"><i class="fas fa-check mr-1.5"></i>After</th>
+                      </tr>
+                    </thead>
+                    <tbody class="dark:text-gray-400 text-gray-600 divide-y dark:divide-gray-700/50 divide-gray-100">
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Deployment method</td>
+                        <td class="px-4 py-3">Manual, per-environment</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Single pipeline trigger, all 19 envs</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Engineer effort</td>
+                        <td class="px-4 py-3">High — repetitive manual steps</td>
+                        <td class="px-4 py-3 text-green-400 font-medium"><strong class="text-accent">80% reduction</strong></td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">Configuration drift</td>
+                        <td class="px-4 py-3">Common — human error</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Eliminated via Chef idempotency</td>
+                      </tr>
+                      <tr class="dark:hover:bg-gray-700/20 hover:bg-gray-50 transition-colors">
+                        <td class="px-4 py-3 font-medium dark:text-gray-300 text-gray-700">New env onboarding</td>
+                        <td class="px-4 py-3">Days of manual setup</td>
+                        <td class="px-4 py-3 text-green-400 font-medium">Hours — add to pipeline, done</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
                 <span class="tech-tag-sm">Chef</span>
                 <span class="tech-tag-sm">Jenkins</span>
                 <span class="tech-tag-sm">PowerShell</span>
                 <span class="tech-tag-sm">Bash</span>
+                <span class="tech-tag-sm">Sumo Logic</span>
+                <span class="tech-tag-sm">IaC</span>
                 <span class="tech-tag-sm">19 Environments</span>
               </div>
-              <div class="impact-badge text-xs">80% effort ↓</div>
             </div>
           </article>
 
