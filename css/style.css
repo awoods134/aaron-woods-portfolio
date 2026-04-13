@@ -658,6 +658,208 @@ section {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   CASE STUDY CARDS
+   ═══════════════════════════════════════════════════════════ */
+.case-study-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ── Problem / Solution / Result panels ── */
+.cs-psr-card {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border-left: 3px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.cs-psr-card:hover {
+  transform: translateY(-2px);
+}
+
+.cs-problem {
+  border-left-color: #f87171;
+}
+
+.dark .cs-problem {
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-left: 3px solid #f87171;
+}
+
+html:not(.dark) .cs-problem {
+  background: rgba(239, 68, 68, 0.04);
+  border: 1px solid rgba(239, 68, 68, 0.12);
+  border-left: 3px solid #f87171;
+}
+
+.cs-solution {
+  border-left-color: var(--accent);
+}
+
+.dark .cs-solution {
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-left: 3px solid var(--accent);
+}
+
+html:not(.dark) .cs-solution {
+  background: rgba(0, 212, 255, 0.04);
+  border: 1px solid rgba(0, 212, 255, 0.12);
+  border-left: 3px solid var(--accent);
+}
+
+.cs-result {
+  border-left-color: #4ade80;
+}
+
+.dark .cs-result {
+  background: rgba(74, 222, 128, 0.06);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  border-left: 3px solid #4ade80;
+}
+
+html:not(.dark) .cs-result {
+  background: rgba(74, 222, 128, 0.04);
+  border: 1px solid rgba(74, 222, 128, 0.12);
+  border-left: 3px solid #4ade80;
+}
+
+.cs-psr-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 0.5rem;
+}
+
+.cs-problem .cs-psr-label { color: #f87171; }
+.cs-solution .cs-psr-label { color: var(--accent); }
+.cs-result .cs-psr-label { color: #4ade80; }
+
+/* ── Section title inside case study ── */
+.cs-section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 0.75rem;
+}
+
+.dark .cs-section-title { color: #d1d5db; }
+html:not(.dark) .cs-section-title { color: #374151; }
+
+/* ── Architecture Diagram ── */
+.arch-diagram {
+  min-width: 0;
+}
+
+.arch-flow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.arch-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.625rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  line-height: 1.3;
+  min-width: 70px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.arch-node:hover {
+  transform: translateY(-2px);
+}
+
+.dark .arch-node {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #d1d5db;
+}
+
+html:not(.dark) .arch-node {
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.08);
+  color: #374151;
+}
+
+.arch-node-icon {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Node color variants */
+.arch-trigger .arch-node-icon { color: var(--accent); }
+.arch-ai .arch-node-icon { color: var(--accent); }
+.arch-bedrock .arch-node-icon { color: #c084fc; }
+.arch-scan .arch-node-icon { color: #fb923c; }
+.arch-servers .arch-node-icon { color: #60a5fa; }
+.arch-findings .arch-node-icon { color: #fbbf24; }
+.arch-heal .arch-node-icon { color: #4ade80; }
+.arch-report .arch-node-icon { color: #60a5fa; }
+
+.dark .arch-trigger { border-color: rgba(0, 212, 255, 0.2); }
+.dark .arch-ai { border-color: rgba(0, 212, 255, 0.2); }
+.dark .arch-bedrock { border-color: rgba(192, 132, 252, 0.2); }
+
+.arch-arrow {
+  color: rgba(156, 163, 175, 0.5);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+/* ── Tech Decision Cards ── */
+.cs-decision-card {
+  padding: 0.875rem;
+  border-radius: 0.625rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.dark .cs-decision-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+html:not(.dark) .cs-decision-card {
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+
+.cs-decision-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 212, 255, 0.25) !important;
+}
+
+.cs-decision-tool {
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.cs-decision-reason {
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
+
+.dark .cs-decision-reason { color: #9ca3af; }
+html:not(.dark) .cs-decision-reason { color: #6b7280; }
+
+/* ═══════════════════════════════════════════════════════════
    PRINT STYLES
    ═══════════════════════════════════════════════════════════ */
 @media print {
